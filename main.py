@@ -1,9 +1,12 @@
-#Izveidot funkciju, kas izvada saraksta elementus. Funkcijas parametri - elementu daudzums, saraksts:
-def izdruka(daudzums, sar1):
-  for elem in range(0,daudzums):
-    print(sar1[elem])
-  return 0
+def Atlaide(summa):
+  rez =""
+  if summa<100:
+   rez = "Atlaide nav piešķirte, jāmaksā vēļ" + str(summa)
+  elif summa >=100 and summa <200:
+   rez = "Atlaide 5%, jāmaksā vēl" + str(summa*0.05)
+  else:
+    rez = "Atlaide 10%, jāmaksā vēl" + str(summa*0.9)
+  return rez
 
-saraksts = [2,4,5,6,1,2,34,5]
-daudzums = int(input("Ievadi elementu skaitu: "))
-rez = izdruka(daudzums, saraksts)
+summa = float(input("Ievadiet summa:"))
+print(Atlaide(summa))
